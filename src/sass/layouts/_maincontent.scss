@@ -1,0 +1,261 @@
+.maincontent {
+  background: rgba(13,71,161,.8);
+  width: 100%;
+  overflow-x: hidden;
+  height: 100vh;
+
+  @media screen and (max-width: 768px) {
+    height: auto;
+  }
+}
+
+.blocks-wrap {
+  // width: 100%;
+  min-height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: flex-start;
+  transition: .5s;
+
+  @media screen and (max-width: 768px) {
+    min-height: 0;
+  }
+}
+
+.blocks {
+  flex-shrink: 0;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  color: #fff;
+
+  @media screen and (max-width: 768px) {
+    padding: 20px;
+  }
+}
+
+
+//  About
+.about {
+  // display: none;
+}
+
+.about__sup-title,
+.works__sup-title,
+.contacts__sup-title {
+  position: relative;
+  padding: 5px 0;
+  font-size: 2.7rem;
+  margin-bottom: 80px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #E65100;
+    bottom: 0;
+    left: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+  }
+}
+
+.about__title {
+  font-size: 3rem;
+  margin: 0;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
+
+.about__sub-title {
+  color: #E65100;
+  font-size: 2rem;
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+}
+
+.about__skills {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.about__skills-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.about__skills-item {
+  &:before {
+    content: "- ";
+  }
+}
+
+.about__skills-item {
+  color: #EEE;
+}
+
+.about__skills-item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+// Works
+.works {
+  overflow-x: hidden;
+}
+
+.works__list {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: flex-start;
+  // flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  // overflow-x: hidden;
+  width: 100%;
+  transition: .5s;
+}
+
+.works__item {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.works__link {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+}
+
+.works__figure {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.works__img {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+  box-shadow: 0 0 6px 1px #e65100;
+  transition: .3s;
+
+  &:before {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+  }
+}
+
+.works__figcapture {
+  color: #fff;
+  text-align: center;
+  transition: color .3s;
+  font-size: 1.3rem;
+}
+
+.works__item:hover .works__figcapture {
+  color: #E65100;
+}
+
+.works__btns {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.works__btn {
+  background: none;
+  border: none;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  padding: 0 10px;
+
+  &:active {
+    color: #E65100;
+  }
+}
+
+.works__count {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  width: 50px;
+}
+
+// Contacts
+.contacts {
+  // display: none;
+}
+
+.contacts__list {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contacts__item {
+  margin: 0;
+  padding: 0;
+}
+
+.contacts__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.contacts__link {
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: .1;
+
+  &:hover {
+    color: #E65100;
+  }
+}

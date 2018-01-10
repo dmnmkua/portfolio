@@ -1,0 +1,13 @@
+// Normalize
+@import "../libs/normalize/normalize";
+
+// Font awesome
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+// Adjusment
+@import "./layouts/adjusment";
+
+// Layouts
+@import "./layouts/tabs";
+
+@import "./layouts/maincontent";

@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #2979FF;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #311B92 url(../img/Programmer-Wallpaper-17582.png) center center no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}

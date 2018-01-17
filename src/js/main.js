@@ -1,28 +1,18 @@
-// window.addEventListener('load', () => {
-//   let preloaderCol = document.querySelectorAll('.preloader__col');
-//   let preloadList = document.querySelector('.preloader__list');
-//
-//   preloadList.style.display = 'none';
-//   for(let i = 0; i < preloaderCol.length; i++) {
-//     setTimeout(() => {
-//       preloaderCol[i].style.transform = `translateY(100%)`;
-//     }, 200 * i);
-//   }
-// });
 window.addEventListener('load', () => {
   let preloaderCol = document.querySelectorAll('.preloader__col');
   let preloadList = document.querySelector('.preloader__list');
   let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-  console.log(arr);
   let arrCount;
   preloadList.style.display = 'none';
 
   let interval = setInterval(() => {
-    console.log(arr);
     arrCount = Math.floor(Math.random() * arr.length);
-    console.log(arrCount);
-
-    preloaderCol[arr[arrCount]].style.transform = `translateY(100%)`;
+    if(arrCount % 2 === 0) {
+      preloaderCol[arr[arrCount]].style.transform = `translateX(100%)`;
+    }
+    else {
+      preloaderCol[arr[arrCount]].style.transform = `translateX(-100%)`;
+    }
     arr.splice(arrCount, 1);
     if(arr.length === 0) {
       clearInterval(interval);

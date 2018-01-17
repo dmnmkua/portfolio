@@ -20,7 +20,8 @@
   display: -ms-flex;
   display: flex;
   align-items: flex-start;
-  transition: .5s;
+  transition: .5s transform;
+  will-change: transform;
 
   @media screen and (max-width: 768px) {
     min-height: 0;
@@ -137,7 +138,8 @@
   padding: 0;
   // overflow-x: hidden;
   width: 100%;
-  transition: .5s;
+  transition: .5s transform;
+  will-change: transform;
 }
 
 .works__item {
@@ -170,7 +172,8 @@
   margin-bottom: 10px;
   position: relative;
   box-shadow: 0 0 6px 1px #e65100;
-  transition: .3s;
+  transition: .3s transform;
+  will-change: transform;
 
   &:before {
     content: "";
@@ -188,6 +191,7 @@
   color: #fff;
   text-align: center;
   transition: color .3s;
+  will-change: color;
   font-size: 1.3rem;
 }
 
@@ -257,7 +261,8 @@
   color: #fff;
   font-size: 1.2rem;
   text-decoration: none;
-  transition: .1;
+  transition: .1 color;
+  will-change: color;
 
   &:hover {
     color: #E65100;
